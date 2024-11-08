@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>Special Menu Alerts</h1>
+    <ul>
+        <% alerts.forEach(alert => { %>
+            <li><%= alert.name %>: <%= alert.alert %></li>
+        <% }); %>
+    </ul>
+    <a href="/" class="btn">Back to Home</a>
+</div>

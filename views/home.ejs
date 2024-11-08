@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Welcome to Our Restaurant App</h1>
+    <form action="/restaurant" method="get">
+        <select name="restaurant" onchange="this.form.submit()">
+            <% restaurants.forEach(restaurant => { %>
+                <option value="<%= restaurant %>"><%= restaurant %></option>
+            <% }); %>
+        </select>
+    </form>
+    <hr>
+    <h2>Random Menu Item</h2>
+    <p>From <strong><%= restaurant %></strong></p>
+    <ul>
+        <% menu.forEach(item => { %>
+            <li><strong><%= item.name %></strong>: <%= item.description %> - $<%= item.price %></li>
+        <% }); %>
+    </ul>
+    <a href="/alerts" class="btn">Menu Alerts</a>
+</div>
